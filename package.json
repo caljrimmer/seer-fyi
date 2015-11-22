@@ -1,0 +1,29 @@
+{
+  "name": "seer-fyi",
+  "version": "0.0.1",
+  "description": "Seer, For your Information, is a Product Detail Extractor. Provide a url and seer will respond with useful product information on the page",
+  "main" : "index.js",
+  "scripts": {
+    "slate": "rm -rf node_modules && npm install",
+    "start": "NODE_ENV=development node index.js --progress --colors --profile",
+    "test" : "NODE_ENV=test mocha --compilers js:babel/register --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caljrimmer/seer-fyi.git"
+  },
+  "dependencies": {
+    "express":"^4.0.0",
+    "cluster": "^0.7.7",
+    "seer-fyi-api" : "caljrimmer/seer-fyi-api",
+    "seer-fyi-engine" : "caljrimmer/seer-fyi-engine"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-core": "^5.8.22",
+    "jsdom-no-contextify": "^3.1.0",
+    "mocha": "^2.1.0",
+    "expect": "^1.12.1"
+  },
+  "author": "Callum Rimmer<callum@deadtrendy.co.uk> (http://www.deadtrendy.co.uk)"
+}
